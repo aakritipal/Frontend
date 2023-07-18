@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size:62.25%;
+}
+
+body{
+    font-size:1.6rem;
+    display:flex;
+    justify-content:center;
+    align-items:center; 
+    background-color:#f7daef;  
+    height:100vh;
+}
+
+
+.container{
+    height: 60rem;
+    width:40rem;
+    background-color: #fff;
+    border-style:none;
+    border-radius:4px;
+    box-shadow: 1px 1px 1px 1px rgb(240, 233, 238,0.5);
+    position:relative;
+    isolation: isolate;
+    padding: 10rem 0;
+}
+
+.container::before{
+    content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1; 
+	width: 100%;
+	height: 10rem;
+	background:linear-gradient(to right, #de26aa 60% , #fa84d9 );
+	border-radius : 4px 4px 80% 80%;
+}
+.form_title{
+    position: absolute;
+    top:3.5rem;
+    left:50%;
+    font-size:2rem;
+    transform: translateX(-50%);
+    color:#fff;
+    
+}
+
+.form{
+    padding: 2.5rem;
+    background:inherit;
+
+}
+
+.form-group{
+    position: relative;
+    display:flex;
+    align-items:baseline;
+    margin-inline:auto;
+
+}
+
+.form_icon{
+    font-size: 2rem;
+	margin-right: 1rem;
+	color: #fa84d9;
+}
+
+.form_input{
+    position: relative;
+	width: 100%;
+    margin-top: 0.5rem;
+    padding-block: 1rem;
+    border:none;
+    outline:none; 
+   
+}
+
+.form_bar {
+	position: absolute;
+	left: 0;
+	bottom: 0; 
+	background-color:
+		rgba(0, 0, 0, 0.2);
+	 width: 100%; 
+	height: 1px;
+}
+
+  .form_bar::before {
+	content: '';
+	position: absolute;
+	background-color:#fa84d9;
+	width: 100%;
+	height: 1px;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.5s;
+}
+
+.form_input:focus + .form_bar::before,
+.form_input:valid + .form_bar::before {
+	transform: scaleX(1);
+}
+
+
+.form_button{
+    display: block;
+	margin: 2.5rem auto 3rem; 
+    padding: 1rem 4rem;
+    background:linear-gradient(to right, #de26aa 60% , #fa84d9 );
+    border-style:none;
+    border-radius: 14px;
+    cursor:pointer;
+    color:#FFF;
+    
+}
+
+.form_switch{
+  display:flex;
+  justify-content:center;
+  color:grey;
+  margin-top: 1rem;
+  letter-spacing:1px;
+}
+
+.form_switch .form-link{
+    text-decoration: none;
+    color: #de26aa;
+
+}
+.form_button:hover {
+	background:#fa84d9;
+}
+
+.form-link:hover{
+    text-decoration:underline;
+    color:lightblue;
+}
+
+@media screen and (min-width:43.75em){
+    .container::before{
+        height:30rem; 
+    }
+
+    .form{
+		transform: translateX(10rem);
+		border-radius: inherit;
+		box-shadow: inherit;
+	}
+
+    .form_title{
+    
+            left: 8rem;
+
+    }
+
+
+}

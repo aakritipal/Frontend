@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size:62.5%;
+
+}
+
+body{
+    font-size:1.6rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-color:#ede8e8;
+
+}
+
+ .cards{
+    
+    display:grid;
+    background-color: #fff;
+    gap:10px;
+
+    
+ }
+
+ .card-left{
+    background: url('https://images.unsplash.com/photo-1687471531982-e6d5868773a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80');
+    padding: 0.5em 6em 3em 0.5em;
+    transition: transform .5s ease-in; 
+}
+
+ .cards:hover .card-left{
+    transform: scale(1.1);
+} 
+
+.name, .date{
+    color:#fff;
+    font-size:2rem;
+    margin-bottom:2px;
+   
+}
+
+.card-right{
+    padding: 1em 0.5em 1.5em 0.5em;
+    position: relative;
+}
+
+.heading{
+    margin-bottom: 1rem;
+    font-family: 'Caprasimo', cursive;
+    letter-spacing:1.5px;
+
+}
+
+.lead1{
+    text-transform:uppercase;
+    color:grey;
+    font-weight:100;
+    letter-spacing:1.5px;
+    margin-bottom:1rem;
+    font-size:0.8rem;
+}
+.lead2{
+    margin-bottom:1.5rem;
+}
+
+.extend{
+    position:relative;
+    text-decoration:none;
+    font-weight:bold;
+    color:#e0a502;
+
+}
+
+
+   
+.extend span{
+    transition: transform 2s ease-in-out;
+
+}
+
+.extend:hover span{
+    transform :translateX(0.5rem);       /*Not working*/
+}
+
+
+@media screen and (min-width:52.25em){
+    .cards{
+        max-width:90rem;
+        display:grid;
+        grid-auto-flow:column;
+        place-self:center;
+        gap:20px;
+    }
+
+    .card-right{
+        padding:1.5em 1em 1.5rem 0;
+    }
+    
+    
+}
