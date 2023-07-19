@@ -123,9 +123,9 @@ body{
 
     .list {
          position: absolute;
-         top:10 px; 
+         top: 0px; 
          margin-top:5rem;
-         left:1px;
+         left:0px;
          flex-direction: column;
          width: 100%;
          justify-content: center;
